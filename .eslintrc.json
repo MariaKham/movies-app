@@ -1,0 +1,151 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "build"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:import/recommended",
+        "prettier"
+    ],
+    "parserOptions": {
+        "babelOptions": {
+            "parserOpts": {
+                "plugins": [
+                    "jsx"
+                ]
+            }
+        },
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "codeFrame": true,
+        "requireConfigFile": false
+    },
+    "parser": "@babel/eslint-parser",
+    "plugins": [
+        "react",
+        "prettier",
+        "import",
+        "jsx-a11y",
+        "react-hooks"
+    ],
+    "rules": {
+        "react/destructuring-assignment": 0,
+        "class-methods-use-this": "off",
+        // "react/prefer-stateless-function": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "function-declaration"
+            }
+        ],
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                "additionalHooks": "(useMyCustomHook|useMyOtherCustomHook)"
+            }
+        ],
+        "no-plusplus": "off",
+        "no-nested-ternary": "off",
+        "indent": [
+            "error",
+            2
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "linebreak-style": [
+            0,
+            "unix"
+        ],
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/prop-types": 0,
+        "no-destructive": "off",
+        // "jsx-a11y/rule-name": 2,
+        "import/no-unresolved": [
+            2,
+            {
+                "caseSensitive": false
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "import/order": [
+            2,
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ],
+                "moduleDirectory": [
+                    "node_modules",
+                    "src/"
+                ]
+            }
+        }
+    }
+}
