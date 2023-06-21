@@ -33,7 +33,9 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix --color",
     "prepare": "husky install",
-    "format": "prettier"
+    "format": "prettier",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
