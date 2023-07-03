@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Offline, Online } from 'react-detect-offline'
+// import { Offline, Online } from 'react-detect-offline'
 import { Pagination, Tabs } from 'antd'
 import { debounce } from 'lodash'
 
@@ -7,7 +7,7 @@ import { GenresProvider } from '../context/genres-context'
 import MovieService from '../../services/movieService'
 import MoviesList from '../moviesList/MoviesList'
 import SearchForm from '../searchForm/SearchForm'
-import ErrorMessage from '../errorMessage/ErrorMessage'
+// import ErrorMessage from '../errorMessage/ErrorMessage'
 
 import '../../style.css'
 
@@ -142,28 +142,28 @@ class App extends Component {
     return (
       <div className="content-wrapper">
         <GenresProvider value={genres}>
-          <Offline>
+          {/* <Offline>
             <ErrorMessage description="Oops...You are offline. Please, check your internet connection" />
-          </Offline>
-          <Online>
-            <Tabs
-              centered
-              defaultActiveKey="1"
-              onChange={this.switchTabs}
-              items={[
-                {
-                  label: 'Search',
-                  key: '1',
-                  children: mainContent,
-                },
-                {
-                  label: 'Rated',
-                  key: '2',
-                  children: mainContent,
-                },
-              ]}
-            />
-          </Online>
+          </Offline> */}
+          {/* <Online> */}
+          <Tabs
+            centered
+            defaultActiveKey="1"
+            onChange={this.switchTabs}
+            items={[
+              {
+                label: 'Search',
+                key: '1',
+                children: mainContent,
+              },
+              {
+                label: 'Rated',
+                key: '2',
+                children: mainContent,
+              },
+            ]}
+          />
+          {/* </Online> */}
         </GenresProvider>
       </div>
     )

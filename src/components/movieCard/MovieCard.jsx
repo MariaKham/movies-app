@@ -6,7 +6,7 @@ import { format } from 'date-fns'
 import Spinner from '../spinner/Spinner'
 import { GenresConsumer } from '../context/genres-context'
 import MovieService from '../../services/movieService'
-import icon from '../../images/no_poster_available.jpg'
+import icon from '../../assets/no_poster_available.jpg'
 import './movieCard.css'
 
 class MovieCard extends Component {
@@ -84,7 +84,7 @@ class MovieCard extends Component {
                 className="movie-card__rating"
                 style={{
                   border: `2px solid ${colorRate}`,
-                  height: 25,
+                  height: 30,
                   borderRadius: 40,
                   textAlign: 'center',
                   paddingTop: 5,

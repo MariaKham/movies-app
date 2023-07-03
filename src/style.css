@@ -89,6 +89,7 @@ body {
 
 .movie__genres {
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
     gap: 5px;
     grid-area: genres;
