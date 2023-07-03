@@ -7,7 +7,7 @@ import { GenresProvider } from '../context/genres-context'
 import MovieService from '../../services/movieService'
 import MoviesList from '../moviesList/MoviesList'
 import SearchForm from '../searchForm/SearchForm'
-// import ErrorMessage from '../errorMessage/ErrorMessage'
+import ErrorMessage from '../errorMessage/ErrorMessage'
 
 import '../../style.css'
 
@@ -122,7 +122,7 @@ class App extends Component {
           />
         </div>
         <div className="pagination">
-          {totalResults ? (
+          {totalResults && !rated ? (
             <Pagination
               className={`pagination ${moviesData.length ? '' : 'js-hidden'}`}
               showSizeChanger={false}
@@ -142,6 +142,9 @@ class App extends Component {
     return (
       <div className="content-wrapper">
         <GenresProvider value={genres}>
+          <Offline>
+            <ErrorMessage description="Oops...You are offline. Please, check your internet connection" />
+          </Offline>
           <Online>
             <Tabs
               centered
@@ -161,9 +164,6 @@ class App extends Component {
               ]}
             />
           </Online>
-          <Offline>
-            <p className="internet-error">Oops...You are offline. Please check your internet connection</p>
-          </Offline>
         </GenresProvider>
       </div>
     )
