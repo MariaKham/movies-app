@@ -50,6 +50,8 @@
     "rules": {
         "react/destructuring-assignment": 0,
         "class-methods-use-this": "off",
+        "array-bracket-spacing": 0,
+        "consistent-return": 0,
         // "react/prefer-stateless-function": 0,
         "jsx-a11y/label-has-associated-control": 0,
         "react/function-component-definition": [

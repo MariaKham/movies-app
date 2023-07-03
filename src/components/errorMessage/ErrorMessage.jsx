@@ -1,7 +1,7 @@
 import React from 'react'
 import { Alert, Space } from 'antd'
 
-function ErrorMessage() {
+function ErrorMessage({ description }) {
   return (
     <Space
       direction="vertical"
@@ -12,12 +12,7 @@ function ErrorMessage() {
         margin: 10,
       }}
     >
-      {/* <Alert
-                message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
-                type="warning"
-                closable
-            /> */}
-      <Alert description="Nothing found, please check your request" type="error" closable />
+      <Alert Alert className="error-message" description={description} type="error" closable />
     </Space>
   )
 }

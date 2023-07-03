@@ -10,13 +10,7 @@ function Spinner() {
         width: '100%',
       }}
     >
-      {/* <Space>
-        <Spin tip="Loading..." size="large">
-          <div className="content" />
-        </Spin>
-      </Space> */}
-
-      <Spin tip="Loading..." size="large">
+      <Spin size="large">
         <div className="content" />
         {/* <Alert
         // message="Alert message title"
